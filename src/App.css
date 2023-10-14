@@ -1,0 +1,295 @@
+/* 
+.stoneBg {
+  background-image: url('./assets/stone.png');
+  width: 100%;
+  height: 100vh;
+  z-index: -5;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.tre1 {
+  background-image: url('./assets/element24.png');
+  width: 20vw;
+  height: 50vh;
+  bottom: 5%;
+  left: 30%;
+  position: absolute;
+   z-index: -10;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.tre2 {
+  background-image: url('./assets/element27.png');
+  width: 12vw;
+  height: 40vh;
+  position: absolute;
+   z-index: -10;
+   bottom: 3%;
+   right: 33%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre3 {
+  background-image: url('./assets/element4.png');
+  width: 18vw;
+  height: 36vh;
+  position: absolute;
+   z-index: -10;
+  bottom: 0rem;
+  right: 0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+ 
+.tre4 {
+  background-image: url('./assets/element31.png');
+  width: 14vw;
+  height: 25vh;
+  position: absolute;
+   z-index: -10;
+   left: 20%;
+   top: 5%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre5 {
+  background-image: url('./assets/element29.png');
+  width: 11vw;
+  height: 33vh;
+  position: absolute;
+   z-index: -10;
+   left: 0%;
+   bottom: 3%; 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre6 {
+  background-image: url('./assets/element13.png');
+  width: 18vw;
+  height: 36vh;
+  position: absolute;
+   z-index: -10;
+   right: 5%;
+   top: 0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre7 {
+  background-image: url('./assets/element15.png');
+  width: 15vw;
+  height: 40vh;
+  position: absolute;
+   z-index: -10;
+   right: 28vw;
+   top: 0%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre8 {
+  background-image: url('./assets/element29.png');
+  width: 12vw;
+  height: 36vh;
+  position: absolute;
+   z-index: -10;
+   left: 36vw;
+   top: 2vh; 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tre9 {
+  background-image: url('./assets/element4.png');
+  width: 12vw;
+  height: 25vh;
+  position: absolute;
+   z-index: -10;
+  top: 30vh;
+  left: 1vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+.App {
+  width: 100VW;
+  height: 100vh;
+  background-image: url('./assets/stone.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 20;
+}
+
+.zFish {
+  position: absolute;
+  z-index: -10;
+}
+
+.btnL {
+  background-image: url('./assets/btnLeft.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 3vw;
+  height: 10vh;
+}
+
+.btnR {
+  background-image: url('./assets/btnRgt.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 4vw;
+  height: 10vh;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.btnImg {
+  height: 12vh;
+  width: 12vw;
+  
+}
+
+.btnCnnImg {
+  height: 30vh;
+  width: 12vw;
+  
+}
+
+.cnnTxt {
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  display: flex;
+  z-index: 30;
+  font-size: 5vw;
+  color: plum;
+}
+
+.cnnTxtR {
+  position: absolute;
+  bottom: 30vh;
+  right: 15vw;
+  display: flex;
+  z-index: 30;
+  font-size: 5vw;
+  color: plum;
+}
+
+.cnnTxtL {
+  position: absolute;
+  bottom: 30vh;
+  left: 15vw;
+  display: flex;
+  z-index: 30;
+  font-size: 5vw;
+  color: plum;
+}
+
+
+.txtScore {
+  position: absolute;
+  bottom: -30vh;
+  right: 5vw;
+  display: flex;
+  z-index: 30;
+  font-size: 3vw;
+  color: white;
+}
+
+.txtScoreH {
+  position: absolute;
+  bottom: -38vh;
+  right: 2.5vw;
+  display: flex;
+  z-index: 30;
+  font-size: 3vw;
+  color: white;
+}
+
+.txtAmno {
+  position: absolute;
+  bottom: -30vh;
+  right: -6.5vw;
+  display: flex;
+  z-index: 30;
+  font-size: 3vw;
+  color: white;
+}
+
+.txtAmnoH {
+  position: absolute;
+  bottom: -38vh;
+  right: -9vw;
+  display: flex;
+  z-index: 30;
+  font-size: 3vw;
+  color: white;
+}
+
+
+
+.btnPos {
+  position: absolute;
+  top: 5vh;
+  left: 1.5vw;
+  display: flex;
+  z-index: 30;
+
+}
+
+.btnPos2 {
+  position: absolute;
+  top: 5vh;
+  right: 1.5vw;
+  display: flex;
+  z-index: 30;
+}
+
+.btnPos3 {
+  position: absolute;
+  top: 20vh;
+  right: 1.5vw;
+  display: flex;
+  z-index: 30;
+}
+
+.btnPos4 {
+  position: absolute;
+  bottom: 3vh;
+  right: 1.5vw;
+  display: flex;
+  z-index: 30;
+}
+
+.cnnBtn {
+  position: absolute;
+  bottom: 6vh;
+  right: 15vw;
+  display: flex;
+  z-index: 30;
+
+}
+
+.cnnBtnL {
+
+  position: absolute;
+  bottom: 6vh;
+  left: 15vw;
+  display: flex;
+  z-index: 30;
+}
+
