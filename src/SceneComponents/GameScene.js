@@ -22,7 +22,13 @@ const GameSence = ({cnnSide}) => {
     const [scoreVal, setScoreVal] = useState(false)
     // const { numFish } = useGameStore((state) => state.fishData) 
     const [gameState, setGameState] = useState([])
-    const fishRef = useRef([])
+    const updateAmno = useGameStore((state) => state.updateNumAmno)
+
+    const fishRef = useRef()
+
+    // useEffect(() => {
+    //     updateAmno()
+    // },[userScore])
 
     useEffect(() => {
         setGameState([...gameFishData])
@@ -41,6 +47,14 @@ const GameSence = ({cnnSide}) => {
 
     useEffect(() => {
         console.log(gameState)
+        const len = gameState.length
+        // const data = gameState.map((fData) => {
+        //     if(fData.fishIdx === fishIdx){
+        //         if(fishIdx+1 === len){
+
+        //         }
+        //     }
+        // })
     }, [gameState])
 
     const updateGameState = (fishIdx, fishHP) => {
@@ -66,12 +80,13 @@ const GameSence = ({cnnSide}) => {
 
                         <RigidBody 
                         name="fishBody"
-                        linearVelocity={i.fishIdx % 2 === 0 ? [0.42,0,0] : i.fishIdx % 3 === 0 ? [0,0.36,0] : [0.6,0,0]}
+                        linearVelocity={i.fishIdx % 2 === 0 ? [0.42,0,0] : i.fishIdx % 3 === 0 ? [0.42,0.6,0] : [0.6,0,0]}
                         onCollisionEnter={({ other }) => {
                             if(other.rigidBodyObject.name === "amnoBody"){
                                 hitRef.current = true;
                                 updateGameState(i.fishIdx, i.fishHitPts)
                                 updateUserScore()
+                                updateAmno()
                             }
                         }}
                         onCollisionExit={({ other }) => {

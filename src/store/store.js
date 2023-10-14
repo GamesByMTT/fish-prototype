@@ -93,7 +93,8 @@ const gameStore = create((set) => (
         user: '',
         userScore: 0,
         numAmno: 18,
-        decNumAmno: () => set((state) => ({ numAmno: state.numAmno - 1})),
+        updateNumAmno: () => set((state) => ({numAmno: state.numAmno + Math.round(state.userScore/5 ) }) ),
+        decNumAmno: () => set((state) => ({ numAmno: state.numAmno - 2})),
         incUserScore: () => set((state) => ({ userScore: state.userScore + 10})),
         decUserScore: () => set((state) => ({ userScore: state.userScore - 1})),
         gameLevel: 1,
@@ -123,7 +124,7 @@ const gameStore = create((set) => (
                 fishHitPts: 7,
                 fTexture : FishTexture3,
                 fSize: [1.5,1.5],
-                fPos: [randomNumberInRange(-5,0), randomNumberInRange(-2,3) ,0],
+                fPos: [randomNumberInRange(-5,-1), randomNumberInRange(-2,3) ,0],
                 // fAnim
             },
             {
@@ -132,7 +133,7 @@ const gameStore = create((set) => (
                 fishHitPts: 6,
                 fTexture : FishTexture4,
                 fSize: [1.5,1.5],
-                fPos: [randomNumberInRange(-3,1), randomNumberInRange(-1,3),0],
+                fPos: [randomNumberInRange(-6,1), randomNumberInRange(-1,3),0],
                 // fAnim
             },
             {

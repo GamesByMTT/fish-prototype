@@ -57,6 +57,7 @@ const CannonMesh = ({sizeArgs, CnnTexture, meshPos, meshPosBtn, meshPosBtnR, sen
 
     useEffect(() => {
         updateUserScore()
+        
         updateAmno()
         setTimeout(() => {
             if ( count > 40 && amnoCount.length > 40  ) {
@@ -76,7 +77,7 @@ const CannonMesh = ({sizeArgs, CnnTexture, meshPos, meshPosBtn, meshPosBtnR, sen
     },[mousePos])
 
     useEffect(() => {
-        if(numAmno < 0 && userScore < 1 ){
+        if(numAmno < 1 && userScore < 1 ){
             setStopFire(false)
         }
     },[userScore,numAmno])
