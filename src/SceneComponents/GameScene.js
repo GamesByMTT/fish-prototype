@@ -39,23 +39,25 @@ const GameSence = ({cnnSide}) => {
     }
 
     useFrame(() => {
+        // console.log(fishRef.current.getWorldPosition())
         if(hitRef.current){
             // updateUserScore()
         }
+
     })
 
 
-    useEffect(() => {
-        console.log(gameState)
-        const len = gameState.length
-        // const data = gameState.map((fData) => {
-        //     if(fData.fishIdx === fishIdx){
-        //         if(fishIdx+1 === len){
+    // useEffect(() => {
+    //     console.log(gameState)
+    //     const len = gameState.length
+    //     const data = gameState.map((fData) => {
+    //         if(fData.fishIdx === fishIdx){
+    //             if(fishIdx+1 === len){
 
-        //         }
-        //     }
-        // })
-    }, [gameState])
+    //             }
+    //         }
+    //     })
+    // }, [gameState])
 
     const updateGameState = (fishIdx, fishHP) => {
         const newState = gameState.map((obj) => {
@@ -76,10 +78,10 @@ const GameSence = ({cnnSide}) => {
             { gameState.map((i, k) => {
             if(i.fishHitPts > 0) {
                 return (
-              
 
                         <RigidBody 
                         name="fishBody"
+                        ref={fishRef}
                         linearVelocity={i.fishIdx % 2 === 0 ? [0.42,0,0] : i.fishIdx % 3 === 0 ? [0.42,0.6,0] : [0.6,0,0]}
                         onCollisionEnter={({ other }) => {
                             if(other.rigidBodyObject.name === "amnoBody"){
@@ -108,8 +110,8 @@ const GameSence = ({cnnSide}) => {
             )}
         </>
             { cnnSide === 'right' ? 
-            <CannonMesh sendData={sendData} sizeArgs={[1.5,2]}  CnnTexture={CnnTexture} meshPos={[4.3,-2.8,0]} meshPosBtn={[2.8,-2.8,0]} meshPosBtnR={[5.2,-2.8,0]} />
-            : <CannonMesh sendData={sendData} sizeArgs={[1.5,2]}  CnnTexture={CnnTexture} meshPosBtn={[-6,-2.8,0]} meshPosBtnR={[-3.6,-2.8,0]}  meshPos={[-4.5,-2.8,0]} />
+            <CannonMesh sendData={sendData} sizeArgs={[1.5,2]}  CnnTexture={CnnTexture} meshPos={[4.3,-2.8,0]} meshPosBtn={[2.5,-2.8,0]} meshPosBtnR={[5.5,-2.8,0]} />
+            : <CannonMesh sendData={sendData} sizeArgs={[1.5,2]}  CnnTexture={CnnTexture} meshPosBtn={[-6.4,-2.8,0]} meshPosBtnR={[-3.3,-2.8,0]}  meshPos={[-4.5,-2.8,0]} />
         }
             
 

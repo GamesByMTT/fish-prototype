@@ -27,7 +27,7 @@ const CannonAmno =  ({posX, posY, sizeAmno, firePos}) => {
         visAmno &&
         <RigidBody name="amnoBody"
         
-        linearVelocity={[-firePos*3, 5 ,0]}
+        linearVelocity={[-firePos*6, 3.6 ,0]}
         ref={rigidRef}
         type="dynamic"
         mass={2}

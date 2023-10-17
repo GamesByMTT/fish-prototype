@@ -23,6 +23,12 @@ const FishMeshView = ({sizeArgs, FishTexture, meshPos, fishIdx, fishHP}) => {
         setFLife(false)
     },[fishHP, fishIdx, gameFishData, hpPercent])
 
+    useEffect(() => {
+        if(fishIdx === 1) {
+            console.log(meshPos)
+        }
+    },[meshPos])
+
     return ( 
         <>
         

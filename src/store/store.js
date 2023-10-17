@@ -5,6 +5,7 @@ import FishTexture3 from '../assets/Fish3.png'
 import FishTexture4 from '../assets/Fish4.png'
 import FishTexture5 from '../assets/Fish5.png'
 import FishTexture6 from '../assets/Fish6.png'
+import omit from 'lodash-es/omit'
 
 const randomNumberInRange =(min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -155,7 +156,8 @@ const gameStore = create((set) => (
                 // fAnim
             }
         ],
-        // updateFishData: (fishData) => set((state) => ({ ...state, updateGameState: updateGame})),
+        clearFishData: () => set((state) => omit(state, ['fishData']), true),
+        updateFishData: (newData) => set(state => ({ ...state ,fishData: newData})),
 
     }
 ))

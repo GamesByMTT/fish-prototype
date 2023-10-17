@@ -33,7 +33,7 @@ const CannonMesh = ({sizeArgs, CnnTexture, meshPos, meshPosBtn, meshPosBtnR, sen
             // sendData(amnoRef)
 
         }
-        cnnFireRef.current.rotation.z = -Math.PI/180 * (mousePos.x/14.44 - 45)
+        cnnFireRef.current.rotation.z = -Math.PI/180 * (mousePos.x/8.66 - 75)
         setTimeout(() => {
             setFireState(false)
         }, 600);
@@ -73,7 +73,7 @@ const CannonMesh = ({sizeArgs, CnnTexture, meshPos, meshPosBtn, meshPosBtnR, sen
     },[count])
 
     useEffect(() => {
-        setFirePos(-Math.PI/180 * (mousePos.x/14.44 - 45))
+        setFirePos(-Math.PI/180 * (mousePos.x/8.66 - 75))
     },[mousePos])
 
     useEffect(() => {
